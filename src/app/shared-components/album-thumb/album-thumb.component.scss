@@ -1,15 +1,22 @@
 @import "../../../assets/colors.scss";
 .album {
-  text-align: center;
-  padding: 20px;
+  // text-align: center;
+  // padding: 20px;
   h4 {
     color: $default;
     font-weight: normal;
     font-size: 14px;
+    text-align: center;
     small {
       display: block;
       color: $primary;
       margin-top: 10px;
     }
+  }
+  &+.album{
+    width: 19%;
+  }
+  img{
+    width: 100%;
   }
 }

@@ -1,7 +1,7 @@
 <div class="album">
-  <img src="https://via.placeholder.com/150" alt="" />
+  <img [src]="album.images[1].url" alt="" />
   <h4>
-    {{ album.nome }}
-    <small> {{ album.artista }} </small>
+    {{ album.name }}
+    <small> {{ album.artists[0].name }} </small>
   </h4>
 </div>

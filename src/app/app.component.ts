@@ -6,15 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'spotify-app';
-  albums = [
-    { nome: 'album nome', artista: 'artista nome' },
-    { nome: 'album nome 2', artista: 'artista nome 2' },
-    { nome: 'album nome 2', artista: 'artista nome 2' },
-    { nome: 'album nome 2', artista: 'artista nome 2' },
-    { nome: 'album nome 2', artista: 'artista nome 2' },
-    { nome: 'album nome 2', artista: 'artista nome 2' },
-    { nome: 'album nome 2', artista: 'artista nome 2' },
-
-  ];
+  constructor() {}
 }

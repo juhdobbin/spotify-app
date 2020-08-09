@@ -1,0 +1,15 @@
+<app-search></app-search>
+
+<div>
+  <h3>Albuns buscados recentemente</h3>
+</div>
+<div class="grid" *ngIf="latestSearches">
+  <div
+    class="grid-item"
+    *ngFor="let album of latestSearches; let index = index"
+    [ngClass]="{ first: index % 5 === 0, last: index % 5 === 4 }"
+  >
+    <app-album-thumb [album]="album"></app-album-thumb>
+  </div>
+</div>
+

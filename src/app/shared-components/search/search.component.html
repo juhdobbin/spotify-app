@@ -1,7 +1,11 @@
-<label for="search">Busque por artistas, albuns ou músicas</label>
-<input
-  name="search"
-  aria-label="Busque por artistas, albuns ou músicas"
-  type="text"
-  placeholder="Comece a escrever..."
-/>
+<div class="search">
+  <label for="search">Busque por artistas, albuns ou músicas</label>
+  <input
+    name="search"
+    aria-label="Busque por artistas, albuns ou músicas"
+    type="text"
+    placeholder="Comece a escrever..."
+    #search="ngModel"
+    [(ngModel)]="searchValue"
+  />
+</div>

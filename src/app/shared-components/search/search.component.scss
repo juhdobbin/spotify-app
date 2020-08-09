@@ -1,23 +1,25 @@
 @import "../../../assets/colors.scss";
-
-input {
-  width: 100%;
-  border: 0px;
-  border-bottom: solid 1px $primary;
-  background: transparent;
-  height: 60px;
-  font-size: 48px;
-  color: $default;
-
-  &::placeholder {
-    font-weight: bold;
+.search {
+  margin-bottom: 50px;
+  input {
+    width: 100%;
+    border: 0px;
+    border-bottom: solid 1px $primary;
+    background: transparent;
+    height: 60px;
     font-size: 48px;
+    color: $default;
+
+    &::placeholder {
+      font-weight: bold;
+      font-size: 48px;
+    }
+    &:focus {
+      outline: none;
+    }
   }
-  &:focus {
-    outline: none;
+  label {
+    font-size: 16px;
+    color: $default;
   }
-}
-label {
-  font-size: 16px;
-  color: $default;
 }
