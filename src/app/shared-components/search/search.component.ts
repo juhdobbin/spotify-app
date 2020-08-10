@@ -16,7 +16,7 @@ export class SearchComponent {
     this.searchService.inputSearchChanged$
       .pipe(debounceTime(500), distinctUntilChanged())
       .subscribe(() => {
-        if (this.searchValue === '') {
+        if (!this.searchValue) {
           this.searchService.searchResults$.next(null);
         } else {
           this.searchValue = this.searchService.inputSearchChanged$.value;

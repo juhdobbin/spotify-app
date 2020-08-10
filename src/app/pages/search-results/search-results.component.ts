@@ -40,9 +40,11 @@ export class SearchResultsComponent implements OnInit {
     this.latestSearches = this.searchService.latestSearches$.value;
   }
 
-  albumDetails(album) {
+  albumDetails(album, save?) {
     this.router.navigate(['/albums', album.id]);
-    this.saveRecent(album);
+    if (save) {
+      this.saveRecent(album);
+    }
   }
 
   saveRecent(album: Item) {
@@ -54,7 +56,7 @@ export class SearchResultsComponent implements OnInit {
     };
 
     if (!this.latestSearches) {
-      this.latestSearches.push(newAlbum);
+      this.latestSearches = [newAlbum];
     } else if (!this.latestSearches.some((item) => item.id === album.id)) {
       this.latestSearches = [...this.latestSearches, newAlbum];
     }

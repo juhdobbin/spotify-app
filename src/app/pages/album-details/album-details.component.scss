@@ -17,21 +17,3 @@ ul {
     }
   }
 }
-.player-wrapper {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #000;
-  color: #f4f4f4;
-  padding: 5px;
-  p{
-    padding: 5px 10px;
-  }
-  audio {
-    width: 100%;
-    &::-webkit-media-controls-panel {
-      background-color: #999;
-    }
-  }
-}
