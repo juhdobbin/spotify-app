@@ -7,5 +7,6 @@
     placeholder="Comece a escrever..."
     #search="ngModel"
     [(ngModel)]="searchValue"
+    (ngModelChange)="searchValueChanged()"
   />
 </div>

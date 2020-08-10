@@ -12,6 +12,7 @@ import { SongItemComponent } from './shared-components/song-item/song-item.compo
 import { SearchResultsComponent } from './pages/search-results/search-results.component';
 import { AlbumDetailsComponent } from './pages/album-details/album-details.component';
 import { ErrorComponent } from './pages/error/error.component';
+import { FormatArtistsNamePipe } from './pipes/format-artists-name.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ErrorComponent } from './pages/error/error.component';
     SearchResultsComponent,
     AlbumDetailsComponent,
     ErrorComponent,
+    FormatArtistsNamePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [

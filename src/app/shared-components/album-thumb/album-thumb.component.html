@@ -2,6 +2,6 @@
   <img [src]="album.images[1].url" alt="" />
   <h4>
     {{ album.name }}
-    <small> {{ album.artists[0].name }} </small>
+    <small>{{album.artists | formatArtistsName}}</small>
   </h4>
 </div>
