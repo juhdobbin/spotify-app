@@ -12,17 +12,18 @@ export class SearchResultsComponent implements OnInit {
   public latestSearches: AlbumList;
   public searchValue;
 
-  constructor(private searchService: SearchService) {}
-
-  ngOnInit(): void {
+  constructor(private searchService: SearchService) {
     this.searchService.searchResults.subscribe(
       (res) => {
-        this.albums = res?.albums?.items || [];
+        this.albums = this.searchService.searchResults$.value?.albums.items;
       },
       (err) => console.log(err)
     );
+  }
+
+  ngOnInit(): void {
     this.searchService.inputSearchChanged$.subscribe(
-      (res) => (this.searchValue = res),
+      (res) => (this.searchValue = this.searchService.inputSearchChanged$.value),
       (err) => console.log(err)
     );
     this.getLatestSearches();
@@ -30,6 +31,6 @@ export class SearchResultsComponent implements OnInit {
 
   getLatestSearches() {
     this.latestSearches = JSON.parse(localStorage.getItem('latestSearches'));
-    console.log('this.latestSearches', this.latestSearches)
+    console.log('this.latestSearches', this.latestSearches);
   }
 }

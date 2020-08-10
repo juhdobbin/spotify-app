@@ -19,6 +19,7 @@ export class SearchComponent {
         if (this.searchValue === '') {
           this.searchService.searchResults$.next(null);
         } else {
+          this.searchValue = this.searchService.inputSearchChanged$.value;
           this.search(this.searchValue);
         }
       });

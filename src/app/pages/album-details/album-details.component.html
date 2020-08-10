@@ -1,1 +1,27 @@
-<p>album-details works!</p>
+<div class="col">
+  <a class="back-button" [routerLink]="['/']"> < Voltar</a>
+</div>
+<div class="grid">
+  <div class="grid-item col-25">
+    <app-album-thumb [album]="album"></app-album-thumb>
+  </div>
+  <div class="grid-item col-75" *ngIf="album?.tracks">
+    <ul>
+      <li
+        *ngFor="let track of album.tracks.items"
+        (click)="openAudioPlayer(track.preview_url, track.name)"
+        [ngClass]="{ hasPreview: track.preview_url }"
+      >
+
+        {{ track.name }}
+        <span>
+          {{ track.duration_ms | date: "mm:ss" }}
+        </span>
+      </li>
+    </ul>
+  </div>
+  <div class="player-wrapper" *ngIf="playing">
+    <p class="text-left">Você está ouvindo agora: {{trackName}}</p>
+    <audio src="{{ playing }}" controls autoplay></audio>
+  </div>
+</div>

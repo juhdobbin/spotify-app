@@ -12,7 +12,7 @@ const routes: Routes = [
     resolve: { init: AuthResolve },
   },
   {
-    path: 'albums/:artist',
+    path: 'albums/:id',
     component: AlbumDetailsComponent,
   },
   {

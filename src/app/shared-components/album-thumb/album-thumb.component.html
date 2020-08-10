@@ -1,7 +1,7 @@
-<div class="album">
-  <img [src]="album.images[1].url" alt="" />
+<div class="album" *ngIf="album" [routerLink]="['/albums', album?.id]">
+  <img [src]="album?.images[1].url" alt="" />
   <h4>
-    {{ album.name }}
-    <small>{{album.artists | formatArtistsName}}</small>
+    {{ album?.name }}
+    <small>{{album?.artists | formatArtistsName}}</small>
   </h4>
 </div>

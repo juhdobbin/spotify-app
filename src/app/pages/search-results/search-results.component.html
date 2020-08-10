@@ -2,7 +2,7 @@
 <div *ngIf="albums && searchValue">
   <h3>Resultados encontrados para "{{ searchValue }}"</h3>
 </div>
-<div class="grid" *ngIf="albums">
+<div class="grid album-grid" *ngIf="albums">
   <div
     class="grid-item"
     *ngFor="let album of albums; let index = index"
@@ -15,7 +15,7 @@
 <div>
   <h3>Albuns acessados recentemente</h3>
 </div>
-<div class="grid" *ngIf="latestSearches">
+<div class="grid album-grid" *ngIf="latestSearches">
   <div
     class="grid-item"
     *ngFor="let album of latestSearches; let index = index"

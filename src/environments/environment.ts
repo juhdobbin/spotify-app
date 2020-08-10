@@ -8,8 +8,8 @@ export const environment = {
   client_secret: 'da95fcda2d944a7cb175ae93997b3322',
   authorize_url: 'https://accounts.spotify.com/authorize',
   api_url: 'https://api.spotify.com/v1/',
-
-  search: 'search',
+  search: 'search/',
+  album: 'albums/'
 };
 
 /*

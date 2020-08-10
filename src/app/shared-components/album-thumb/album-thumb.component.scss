@@ -1,7 +1,11 @@
 @import "../../../assets/colors.scss";
 .album {
-  // text-align: center;
-  // padding: 20px;
+  cursor: pointer;
+  &:hover{
+    opacity: 0.8;
+    transition: ease-in 200ms;
+
+  }
   h4 {
     color: $default;
     font-weight: normal;

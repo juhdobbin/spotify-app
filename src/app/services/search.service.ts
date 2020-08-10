@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from '../../environments/environment';
-import { Subject, Observable } from 'rxjs';
+import { Subject, Observable, BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -10,9 +10,9 @@ export class SearchService {
   private API_URL = environment.api_url;
   private SEARCH = environment.search;
 
-  public inputSearchChanged$: Subject<string> = new Subject<string>();
+  public inputSearchChanged$: BehaviorSubject<string> = new BehaviorSubject<string>('');
 
-  public searchResults$: Subject<any> = new Subject<any>();
+  public searchResults$: BehaviorSubject<any> = new BehaviorSubject<any>(null);
   public searchResults = this.searchResults$.asObservable();
 
   constructor(private http: HttpClient) {}
