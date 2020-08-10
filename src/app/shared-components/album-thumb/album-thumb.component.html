@@ -1,4 +1,4 @@
-<div class="album" *ngIf="album" [routerLink]="['/albums', album?.id]">
+<div class="album" *ngIf="album" (click)="emitAlbum(album)" >
   <img [src]="album?.images[1].url" alt="" />
   <h4>
     {{ album?.name }}

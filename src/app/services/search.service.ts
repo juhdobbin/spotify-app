@@ -15,6 +15,9 @@ export class SearchService {
   public searchResults$: BehaviorSubject<any> = new BehaviorSubject<any>(null);
   public searchResults = this.searchResults$.asObservable();
 
+  public latestSearches$: BehaviorSubject<any> = new BehaviorSubject<any>([]);
+  public latestSearches = this.latestSearches$.asObservable();
+
   constructor(private http: HttpClient) {}
 
   search(searchField) {
@@ -24,4 +27,6 @@ export class SearchService {
 
     return this.http.get(this.API_URL + this.SEARCH, { params });
   }
+
+
 }
