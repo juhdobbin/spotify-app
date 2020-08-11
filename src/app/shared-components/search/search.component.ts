@@ -16,12 +16,6 @@ export class SearchComponent implements OnInit {
     this.searchService.inputSearchChanged$
       .pipe(debounceTime(500), distinctUntilChanged())
       .subscribe(() => {
-        console.log('this.searchValue', this.searchValue);
-        console.log(
-          'this.searchService.lastSearch$',
-          this.searchService.lastSearch$.value
-        );
-
         if (
           this.searchValue &&
           this.searchValue !== '' &&

@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment';
 export class AuthorizationService {
   private AUTHORIZE_URL = environment.authorize_url;
   private CLIENT_ID = environment.client_id;
-  private REDIRECT_URL = 'http://localhost:4200/';
+  private REDIRECT_URL = environment.redirect_url;
 
   constructor() { }
 

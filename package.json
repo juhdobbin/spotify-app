@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "test-coverage": "ng test --code-coverage",
     "build-prod": "ng build --prod",
     "build-dev": "ng build --configuration=dev",
     "build-hom": "ng build --configuration=homolog"
