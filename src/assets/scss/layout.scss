@@ -1,0 +1,34 @@
+.col {
+  width: 100%;
+}
+.col-75 {
+  width: 75%;
+}
+.col-50 {
+  width: 50%;
+}
+.col-25 {
+  width: 25%;
+}
+.col-20 {
+  width: 20%;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+.sidebar {
+  width: 100px;
+  height: 100%;
+  .logo {
+    img {
+      width: 50px;
+    }
+  }
+}
+.content {
+  width: calc(100% - 100px);
+  padding: 15px;
+}

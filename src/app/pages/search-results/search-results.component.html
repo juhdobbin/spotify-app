@@ -17,16 +17,21 @@
   </div>
 </div>
 
-<div>
-  <h3>Albuns acessados recentemente</h3>
-</div>
+<div *ngIf="latestSearches">
+  <div>
+    <h3>Albuns acessados recentemente</h3>
+  </div>
 
-<div class="grid album-grid" *ngIf="latestSearches">
-  <div
-    class="grid-item"
-    *ngFor="let album of latestSearches; let index = index"
-    [ngClass]="{ first: index % 5 === 0, last: index % 5 === 4 }"
-  >
-    <app-album-thumb [album]="album" (albumClicked)="albumDetails($event)"></app-album-thumb>
+  <div class="grid album-grid">
+    <div
+      class="grid-item"
+      *ngFor="let album of latestSearches; let index = index"
+      [ngClass]="{ first: index % 5 === 0, last: index % 5 === 4 }"
+    >
+      <app-album-thumb
+        [album]="album"
+        (albumClicked)="albumDetails($event)"
+      ></app-album-thumb>
+    </div>
   </div>
 </div>
