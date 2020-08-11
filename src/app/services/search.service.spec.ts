@@ -1,9 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, async } from '@angular/core/testing';
 
 import { SearchService } from './search.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('SearchService', () => {
   let service: SearchService;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     TestBed.configureTestingModule({});

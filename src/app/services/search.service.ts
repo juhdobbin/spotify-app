@@ -18,6 +18,8 @@ export class SearchService {
   public latestSearches$: BehaviorSubject<any> = new BehaviorSubject<any>([]);
   public latestSearches = this.latestSearches$.asObservable();
 
+  public lastSearch$: BehaviorSubject<any> = new BehaviorSubject<any>('');
+
   constructor(private http: HttpClient) {}
 
   search(searchField) {

@@ -16,10 +16,20 @@ export class SearchComponent implements OnInit {
     this.searchService.inputSearchChanged$
       .pipe(debounceTime(500), distinctUntilChanged())
       .subscribe(() => {
-        if (this.searchValue && this.searchValue !== '') {
+        console.log('this.searchValue', this.searchValue);
+        console.log(
+          'this.searchService.lastSearch$',
+          this.searchService.lastSearch$.value
+        );
+
+        if (
+          this.searchValue &&
+          this.searchValue !== '' &&
+          this.searchService.lastSearch$.value !== this.searchValue
+        ) {
           this.searchValue = this.searchService.inputSearchChanged$.value;
           this.search(this.searchValue);
-        } else {
+        } else if (this.searchValue === '') {
           // limpa a lista de busca ao apagar os caracteres do input
           this.searchService.searchResults$.next(null);
         }

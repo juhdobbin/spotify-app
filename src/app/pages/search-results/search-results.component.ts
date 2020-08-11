@@ -41,6 +41,7 @@ export class SearchResultsComponent implements OnInit {
   }
 
   albumDetails(album, save?) {
+    this.searchService.lastSearch$.next(this.searchValue);
     this.router.navigate(['/albums', album.id]);
     if (save) {
       this.saveRecent(album);

@@ -1,8 +1,8 @@
 import { FormatArtistsNamePipe } from './format-artists-name.pipe';
 
-describe('ArrayToStringPipe', () => {
+describe('FormatArtistsNamePipe', () => {
   it('create an instance', () => {
-    const pipe = new ArrayToStringPipe();
+    const pipe = new FormatArtistsNamePipe();
     expect(pipe).toBeTruthy();
   });
 });

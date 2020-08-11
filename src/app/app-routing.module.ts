@@ -5,7 +5,7 @@ import { AlbumDetailsComponent } from './pages/album-details/album-details.compo
 import { AuthResolve } from './resolve/auth-resolve';
 import { ErrorComponent } from './pages/error/error.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     component: SearchResultsComponent,
